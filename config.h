@@ -1,11 +1,3 @@
-/* speedie's slstatus make.conf
-/* Recommend using with my dwm config.
-/* Only tested with dwm on Gentoo
-
-/* Make sure to install fontawesome and all dependencies before compiling
-/* Then simply compile with "make clean install"
-
-/* Have a good day!
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
@@ -72,10 +64,8 @@ static const char unknown_str[] = "n/a";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function format          argument */
-	//{ vol_perc, "[: %s%]    ",     NULL },//
-	//{ run_command, "[: %4s]    ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-	{ netspeed_rx, ": %sB/s    ",   "enp0s3"},
+	{ cpu_freq, "  : %shz   ", NULL    },
+	{ netspeed_rx, ": %sB/s    ",   "br0"},
 	{ ram_used, ": %sB    ",      NULL },
 	{ datetime, " %s  ",        "%F" },
 	{ datetime, " %s",          "%T" },
